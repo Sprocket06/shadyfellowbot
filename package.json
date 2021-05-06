@@ -1,0 +1,24 @@
+{
+  "name": "shadyfellowbot",
+  "version": "1.0.0",
+  "description": "A discord bot that helps with running the Blades in the Dark TTRPG",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "require-dir": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node ./index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sprocket06/shadyfellowbot.git"
+  },
+  "author": "Sprocket",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sprocket06/shadyfellowbot/issues"
+  },
+  "homepage": "https://github.com/Sprocket06/shadyfellowbot#readme"
+}
