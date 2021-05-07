@@ -23,19 +23,22 @@ client.on('ready', _=>{
 });
 
 client.on('message', msg => {
-	let args = msg.content.split(' ');
-	if(args[0] == '!reloadshit'){
-		if(msg.author.id == config.admin){
-			Handlers = requireDir('./handlers', { noCache:true });
-			msg.reply('done.')
-		}
-	}else{
-		try {
-			CommandManager.handleMessage(msg);
-		}catch(e){
-			console.log(e);
-			LogChannel.send(`<@${config.admin}>\n${e.stack}`);
-			msg.channel.send('There was an error in processing your command.')
+	if(mgs.content.slice(0,1) == config.prefix){
+		msg.content = msg.content.slice(1)
+		let args = msg.content.split(' ');
+		if(args[0] == '!reloadshit'){
+			if(msg.author.id == config.admin){
+				Handlers = requireDir('./handlers', { noCache:true });
+				msg.reply('done.')
+			}
+		}else{
+			try {
+				CommandManager.handleMessage(msg);
+			}catch(e){
+				console.log(e);
+				LogChannel.send(`<@${config.admin}>\n${e.stack}`);
+				msg.channel.send('There was an error in processing your command.')
+			}
 		}
 	}
 })
