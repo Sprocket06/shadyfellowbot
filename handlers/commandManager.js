@@ -13,22 +13,11 @@ class CommandManager {
       let l = `user: ${msg.author.username} (id: ${msg.author.id}) cmd: ${msg.content}
 args (${args.length}): ${args}`
       global.log(l)
-      if(this.experimentalCommands.includes(cmd)){
-        if(msg.guild && config.test_servers.includes(msg.guild.id)){
-          this.handlers[cmd](args,msg);
-        }
-      }else{
-        this.handlers[cmd](args,msg);
-      }
+      this.handlers[cmd](args,msg);
     }
   }
   addHandler(name,fn,isTestFeature){
     this.handlers[name] = fn
-    if(isTestFeature){
-      this.experimentalCommands.push(name)
-    }else if(this.experimentalCommands.includes(name)){
-      this.experimentalCommands.splice(this.experimentalCommands.indexOf(name),1)
-    }
   }
   removeHandler(name){
     delete this.handlers[name];
