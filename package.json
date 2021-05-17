@@ -4,6 +4,7 @@
   "description": "A discord bot that helps with running the Blades in the Dark TTRPG",
   "main": "index.js",
   "dependencies": {
+    "dice-roller-parser": "^0.1.8",
     "discord.js": "^12.5.3",
     "require-dir": "^1.2.0"
   },

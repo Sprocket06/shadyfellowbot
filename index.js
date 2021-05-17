@@ -23,10 +23,10 @@ client.on('ready', _=>{
 });
 
 client.on('message', msg => {
-	if(mgs.content.slice(0,1) == config.prefix){
+	if(msg.content.slice(0,1) == config.prefix){
 		msg.content = msg.content.slice(1)
 		let args = msg.content.split(' ');
-		if(args[0] == '!reloadshit'){
+		if(args[0] == 'reloadshit'){
 			if(msg.author.id == config.admin){
 				Handlers = requireDir('./handlers', { noCache:true });
 				msg.reply('done.')
