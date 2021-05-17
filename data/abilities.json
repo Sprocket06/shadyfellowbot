@@ -1,0 +1,35 @@
+{
+  "cutter":[
+    {"name": "Battle Born", "info": "You may expend your special armor to reduce harm from an attack in combat or to push yourself during a fight."},
+    { "name": "Bodyguard", "info": "When you protect a teammate, take +1d to your resistance roll. When you gather info to anticipate possible threats in the current situation, you get +1 effect."},
+    { "name": "Ghost Fighter", "info": "You may imbue your hands, melee weapons, or tools with spirit energy. You gain potencyin combat vs. the supernatural. You may grapple with spirits to restrain and capture them." },
+    { "name": "Leader", "info": "When you command a cohort in combat, they continue to fight when they would otherwise break (they’re not taken out when they suffer level 3 harm). They gain +1 effect and 1 armor." },
+    { "name": "Mule", "info": "Your load limits are higher. Light: 5. Normal: 7. Heavy: 8." },
+    { "name": "Not to be trifled with", "info": "You can push yourself to do one of the following: perform a feat of physical strength that verges on the superhuman一engage a small gang on equal footing in close combat." },
+    { "name": "Savage", "info": "When you unleash physical violence, it’s especially frightening. When you command a frightened target, take +1d." },
+    { "name": "Vigorous", "info": "You recover from harm faster. Permanently fill in one of your healing clock segments. Take +1d to healing treatment rolls." },
+    { "name": "Veteran", "info": "Choose a special ability from another source." }
+  ],
+  "leech": [
+    { "name": "Alchemist", "info": "When you inventor craft a creation with alchemical features, take +1 result level to your roll. You begin with one special formula already known." },
+    { "name": "Analyst", "info": "During downtime, you get two ticks to distribute among any long term project clocks that involve investigation or learning a new formula or design plan." },
+    { "name": "Artificer", "info": "When you invent or craft a creation with spark-craft features, take +1 result level to your roll. You begin with one special design already known." },
+    { "name": "Fortitude", "info": "You may expend your special armor to resist a consequence of fatigue, weakness, or chemical effects, or to push yourself when working with technical skill or handling alchemicals." },
+    { "name": "Ghost ward", "info": "You know how to wreck an area with arcane substances and methods so it is either anathema or enticing to spirits (your choice)." },
+    { "name": "Physicker", "info": "You can tinker with bones, blood, and bodily humours to treat wounds or stabilize the dying. You may study a malady or a corpse. Everyone in your crew gets +1d to their healing treatment rolls." },
+    { "name": "Saboteur", "info": "When you wreck, the work is much quieter than it should be and the damage is hidden from casual inspection." },
+    { "name": "Venomous", "info": "Choose a drug or poison (from your bandolier stock) to which you have become immune. You can push yourself to secrete it through your skin or saliva or exhale it as a vapor." },
+    { "name": "Veteran", "info": "Choose a special ability from another source." }
+  ],
+  "whisper": [
+    { "name": "Compel", "info": "You can attune to the ghost field to force a nearby ghost to appear and obey a command you give it. You are not supernaturally terrified by a ghost you summon or compel  (though your allies may be)." },
+    { "name": "Ghost Mind", "info": "You are always aware of supernatural entities in your presence. Take +1d when you gather info about the supernatural."},
+    { "name": "Iron Will", "info": "You're immune to the terror that supernatural entities inflict on sight. Take +1d to resistance rolls with resolve." },
+    { "name": "Occultist", "info": "You know the secret ways to consort with ancient powers, forgotten gods or demons. Once you’ve consorted with one, you get +1d to command cultists who worship it." },
+    { "name": "Ritual", "info": "You can study an occult ritual (or create a new one) to summon a supernatural effect or being. You know the arcane methods to perform ritual sorcery. You begin with one ritual already learned." },
+    { "name": "Strange Methods", "info": "When you invent or craft a creation with arcane features, take +1 result level to your roll. You begin with one arcane design already known." },
+    { "name": "Tempest", "info": "You can push yourself to do one of the following: unleash a stroke of lightning as a weaponーsummon a storm in your immediate vicinity (torrential rain, roaring winds, heavy fog, chilling frost/snow, etc.)." },
+    { "name": "Warded", "info": "You may expend your special armor to resist supernatural consequences, or to push yourself when you deal with arcane forces." },
+    { "name": "Veteran", "info": "Choose a special ability from another source." }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "standard": [
+    { "name":"A Blade or Two", "load":1 },
+    { "name":"Throwing Knives", "load":1 },
+    { "name":"A Pistol", "load":1 },
+    { "name":"A 2nd Pistol", "load":1 },
+    { "name":"A Large Weapon", "load":2 },
+    { "name":"An Unusual Weapon", "load":1 },
+    { "name":"Armor", "load":2},
+    { "name":"Heavy Armor", "load":3},
+    { "name":"Burglary Gear", "load":1},
+    { "name":"Climbing Gear", "load":2},
+    { "name":"Arcane Implements", "load":1},
+    { "name":"Documents", "load":1},
+    { "name":"Subterfuge Supplies", "load":1},
+    { "name":"Demolition Tools", "load":2},
+    { "name":"Tinkering Tools", "load":1},
+    { "name":"Lantern", "load":1}
+  ],
+  "cutter": [
+    {"name":"Fine hand weapon", "load":1},
+    {"name":"Fine heavy weapon", "load":2},
+    {"name":"Scary weapon or tool", "load":1},
+    {"name":"Manacles and chain", "load":1},
+    {"name":"Rage essence vial", "load":1},
+    {"name":"Spiritbane charm", "load":1}
+  ],
+  "leech": [
+    {"name":"Fine tinkering tools", "load":1},
+    {"name":"Fine wrecking tools", "load":2},
+    {"name":"Blowgun and darts, syringes", "load":1},
+    {"name":"Bandolier", "load":1, "amount":3},
+    {"name":"2nd Bandolier", "load":1, "amount":3},
+    {"name":"Gadgets", "load":1, "limit":3}
+  ],
+  "whisper": [
+    {"name":"Fine lightning hook", "load":2},
+    {"name":"Fine spirit mask", "load":1},
+    {"name":"Electroplasm vials", "load":1},
+    {"name":"Spirit bottles", "load":1, "amount":2},
+    {"name":"Ghost key", "load":1},
+    {"name":"Demonbane charm", "load":1}
+  ]
+}

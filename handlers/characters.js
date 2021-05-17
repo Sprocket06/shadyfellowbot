@@ -1,8 +1,8 @@
 const CommandManager = require('../commandManager.js')
 const Config = require('../config.json')
 const fs = require('fs')
-var Characters = require('./characters.json')
-var Abilities = require('./abilities.json')
+var Characters = require('../data/characters.json')
+var Abilities = require('../data/abilities.json')
 var Items = require('./items.json')
 
 function saveCharData(){
