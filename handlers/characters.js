@@ -1,9 +1,9 @@
 const CommandManager = require('../commandManager.js')
 const Config = require('../config.json')
 const fs = require('fs')
-var Characters = require('../data/characters.json')
+var Characters = require('./characters.json')
 var Abilities = require('../data/abilities.json')
-var Items = require('./items.json')
+var Items = require('../data/items.json')
 
 function saveCharData(){
   fs.writeFileSync('./handlers/characters.json', JSON.stringify(Characters,null,2))
