@@ -292,7 +292,7 @@ ${Config.prefix}add trauma <trauma>`)
       return
     }
     C.items.push(I)
-    msg.channel.send(`Equipped **${A.name}**`)
+    msg.channel.send(`Equipped **${I.name}**`)
     saveCharData()
     return
   }
