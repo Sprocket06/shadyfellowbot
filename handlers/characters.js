@@ -282,7 +282,7 @@ ${Config.prefix}add trauma <trauma>`)
       if(Items['standard'].find(_=>_.name.toLowerCase() == args.join(' ').toLowerCase())){
         I = Items['standard'].find(_=>_.name.toLowerCase() == args.join(' ').toLowerCase())
       }else{
-        msg.channel.send(`Could not find an ability matching ${args.join(' ')}. Check your spelling and try again.`)
+        msg.channel.send(`Could not find an item matching ${args.join(' ')}. Check your spelling and try again.`)
         return
       }
     }
