@@ -409,7 +409,7 @@ CommandManager.addHandler('renderTest', (args,msg)=>{
 CommandManager.addHandler('items', (args,msg)=>{
   var C = Characters[msg.author.id]
 
-  msg.channel.send(`${C ? `Class Specific:\n${Items[C.class.toLowerCase()].map(_=>`${_.name} ${_.amount ? `Uses: ${_.amount} ` : ''}${'⭘'.repeat(_.load)}${_.limit ? ` (up to ${'⭘'.repeat(_.limit)})` : ''}`).join('\n')}\n` : ''}Standard:\n${Items.standard.map(_=>`${_.name} ${_.amount ? `Uses: ${_.amount} ` : ''}${'⭘'.repeat(_.load)}${_.limit ? ` (up to ${'⭘'.repeat(_.limit)})` : ''}`).join('\n')}`)
+  msg.channel.send(`${C ? `**__Class Specific:__**\n${Items[C.class.toLowerCase()].map(_=>`${_.name} ${_.amount ? `Uses: ${_.amount} ` : ''}${'⭘'.repeat(_.load)}${_.limit ? ` (up to ${'⭘'.repeat(_.limit)})` : ''}`).join('\n')}\n` : ''}**__Standard:__**\n${Items.standard.map(_=>`${_.name} ${_.amount ? `Uses: ${_.amount} ` : ''}${'⭘'.repeat(_.load)}${_.limit ? ` (up to ${'⭘'.repeat(_.limit)})` : ''}`).join('\n')}`)
 })
 
 CommandManager.addHandler('abilities', (args,msg)=>{
