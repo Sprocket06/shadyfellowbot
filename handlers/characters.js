@@ -84,6 +84,7 @@ function renderChar(sheet){
 Affiliation: *${sheet.crew?sheet.crew:'None'}*
 Heritage: *${sheet.heritage?sheet.heritage:'None'}*
 Background: *${sheet.background?sheet.background:'None'}*
+Look: *${sheet.look?sheet.look:'Covered in semen. (You don\'t like it, change it.)'}*
 Vice: *${sheet.vice?sheet.vice:'None'}*
 
 __Stats:__
@@ -193,7 +194,7 @@ CommandManager.addHandler('set', (args,msg)=>{
   }
   args.splice(0,1)
   var field = args.splice(0,1)[0].toLowerCase()
-    , validFields = 'name,affiliation,heritage,background,class,crew,alias,vice'.split(',')
+    , validFields = 'name,affiliation,heritage,background,class,crew,alias,vice,look'.split(',')
   if(!validFields.includes(field)){
     msg.channel.send(`${args[0]} is not recognized as a valid **set**-able field.`)
     return
