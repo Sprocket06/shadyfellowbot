@@ -324,7 +324,7 @@ ${Config.prefix}add trauma <trauma>`)
   }
   if(field == 'contact'){
     if(!args || args.length < 3){
-      msg.channel.send(`Usage: ${Config.prefix}add contact <favor (-1 for enemy/1 for friend)> <contact name> <contact description>`)
+      msg.channel.send(`Usage: ${Config.prefix}add contact <favor (-1 for enemy/1 for friend)> <contact name> (EXCLUDE THE ,) <contact description>`)
       return
     }
     var favor = parseInt(args[0])
