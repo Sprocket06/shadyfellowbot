@@ -315,9 +315,26 @@ ${Config.prefix}add trauma <trauma>`)
   if(field == 'trauma'){
     if(!args){
       msg.channel.send(`Usage: ${Config.prefix}add trauma <trauma>`)
+      return
     }
     C.trauma.push(args.join(' '))
     msg.channel.send(`Added trauma ${args.join(' ')}`)
+    saveCharData()
+    return
+  }
+  if(field == 'contact'){
+    if(!args || args.length < 3){
+      msg.channel.send(`Usage: ${Config.prefix}add contact <favor (-1 for enemy/1 for friend)> <contact name> <contact description>`)
+      return
+    }
+    var favor = parseInt(args[0])
+    if(!favor){
+      msg.channel.send('Favor must be a valid number (and is almost always -1 or 1)')
+      return
+    }
+    C.contacts.push({favor:favor, name:args[1], info:args.slice(2).join(' ')})
+    msg.channel.send(`Added contact: ${args[1]}, ${args.slice(2).join(' ')}
+(There's no way to edit these so I hope you didn't fuck this up :smile:)`)
     saveCharData()
     return
   }
