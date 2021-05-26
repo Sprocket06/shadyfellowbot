@@ -308,7 +308,7 @@ ${Config.prefix}add trauma <trauma>`)
       msg.channel.send(`Invalid harm level: ${args[0]}`)
       return
     }
-    C.harm[lvl].push(args.slice(1).join(' '))
+    C.harm[lvl-1].push(args.slice(1).join(' '))
     msg.channel.send(`Added lvl.${lvl} harm: ${args.slice(1).join(' ')}`)
     saveCharData()
     return
