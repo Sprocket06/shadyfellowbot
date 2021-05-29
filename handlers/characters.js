@@ -403,12 +403,12 @@ ${Config.prefix}remove trauma <trauma>`)
       msg.channel.send(`Invalid harm level: ${args[0]}`)
       return
     }
-    var i = C.harm[lvl].findIndex(_=> _ == args.slice(1).join(' '))
+    var i = C.harm[lvl-1].findIndex(_=> _ == args.slice(1).join(' '))
     if(i == -1){
       msg.channel.send(`You do not appear to have a lvl.${lvl} harm "${args.slice(1).join(' ')}"`)
       return
     }
-    C.harm[lvl].splice(i,1)
+    C.harm[lvl-1].splice(i,1)
     msg.channel.send(`Removed lvl.${lvl} harm: ${args.slice(1).join(' ')}`)
     saveCharData()
     return
