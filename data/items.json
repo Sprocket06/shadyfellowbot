@@ -40,5 +40,13 @@
     {"name":"Spirit bottles", "load":1, "amount":2},
     {"name":"Ghost key", "load":1},
     {"name":"Demonbane charm", "load":1}
+  ],
+  "hound": [
+    {"name":"Fine pair of pistols", "load":1},
+    {"name":"Fine long rifle", "load":2},
+    {"name":"Electroplasmic Ammunition", "load":1},
+    {"name":"A trained hunting pet", "load":1},
+    {"name":"Spyglass", "load":1},
+    {"name":"Spiritbane Charm", "load":1}
   ]
 }
