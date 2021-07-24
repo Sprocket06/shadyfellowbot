@@ -48,5 +48,13 @@
     {"name":"A trained hunting pet", "load":1},
     {"name":"Spyglass", "load":1},
     {"name":"Spiritbane Charm", "load":1}
+  ],
+  "spider": [
+    {"name":"Fine cover identity", "load":1},
+    {"name":"Fine bottle of whiskey", "load":1},
+    {"name":"Blueprints", "load":1},
+    {"name":"Vial of slumber essence", "load":1},
+    {"name":"Concealed palm pistol", "load":1},
+    {"name":"Spiritbane charm", "load":1}
   ]
 }
