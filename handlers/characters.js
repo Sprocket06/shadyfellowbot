@@ -44,7 +44,9 @@ function newChar(){
     abilities: [],
     items: [],
     contacts:[],
-    load: 0
+    load: 0,
+    coin:0,
+    stash: 0
   }
 }
 
@@ -97,6 +99,9 @@ lv.2| ${sheet.harm[1].length?sheet.harm[1].join(', '):'None'}
 1v.1| ${sheet.harm[0].length?sheet.harm[0].join(', '):'None'}
 Healing: ${sheet.heal_clock.current}/${sheet.heal_clock.total}
 Armor: Light ${CB(sheet.armor.light)} Heavy ${CB(sheet.armor.heavy)} Special ${CB(sheet.armor.special)}
+
+Coin: ${sheet.coin}
+Stash: ${sheet.stash} (${(sheet.stash <= 10)?"Basically Homeless":(sheet.stash<=20)?"McDonalds Worker":(sheet.stash<=39)?"Small Buisness Coper":"Morshu in the Making" })
 
 Playbook Class: ${sheet.class}
 ${align(`Playbook: ${renderGauge(sheet.xp.playbook)}
@@ -166,6 +171,9 @@ lv.2| ${sheet.harm[1].length?sheet.harm[1].join(', '):'None'}
 Healing: ${sheet.heal_clock.current}/${sheet.heal_clock.total}
 Armor: Light ${CB(sheet.armor.light)} Heavy ${CB(sheet.armor.heavy)} Special ${CB(sheet.armor.special)}
 
+Coin: ${sheet.coin}
+Stash: ${sheet.stash} (${(sheet.stash <= 10)?"Basically Homeless":(sheet.stash<=20)?"McDonalds Worker":(sheet.stash<=39)?"Small Buisness Coper":"Morshu in the Making" })
+
 Playbook Class: ${sheet.class}
 ${align(`Playbook: ${renderGauge(sheet.xp.playbook)}
 Insight: ${renderGauge(sheet.xp.insight)}
@@ -226,6 +234,11 @@ CommandManager.addHandler('inc', (args,msg)=>{
     }else{
       incGauge(C.stress,amt)
     }
+  }else if(['coin','stash'].includes(field)){
+    C[field] += amt
+  }else{
+    msg.channel.send(`Whatever you're trying to do, it sure ain't working.`)
+    return
   }
   saveCharData();
   msg.channel.send(`Updated your ${Config.prefix}stats`)
@@ -442,3 +455,16 @@ CommandManager.addHandler('abilities', (args,msg)=>{
   }
   msg.channel.send(Abilities[className].map(_=>`**${_.name}**: ${_.info}`).join('\n'))
 })
+
+CommandManager.addHandler('wallet', (args, msg)=> {
+    var C = Characters[msg.author.id]
+    if(!C){
+		msg.channel.send(`You ain't even got a character yet, fuck you mean wallet?`)
+		return
+	}
+	
+	
+	    
+    msg.channel.send(`You got ${C.coin} coin stashed around the place.${(C.coin > 0)?" Pray you don't get robbed.":""}\nYou have ${C.stash} coin stashed away safely. That means you ${(C.stash <= 10)?"are Basically Homeless":(C.stash<=20)?"a McDonalds Worker":(C.stash<=39)?"a Small Buisness Coper":"a Morshu in the Making" }`)
+	return
+});

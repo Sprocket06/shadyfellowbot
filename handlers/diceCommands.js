@@ -25,6 +25,11 @@ function preprocess(input, cID){
   return input
 }
 
+CommandManager.addHandler('ror2', (args,msg)=>{
+  const characters = 'Commando,Huntress,Bandit,MUL-T,Engineer,Artificer,Mercenary,Rex,Loader,Acrid,Captain'.split(',')
+  msg.channel.send(characters[Math.floor(Math.random() * characters.length)]);
+})
+
 CommandManager.addHandler('roll', (args,msg)=>{
   args.splice(0,1) //args array includes name of command by default. we don't need this here
   var input = preprocess(args.join(' '), msg.author.id)
