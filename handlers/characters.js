@@ -158,10 +158,10 @@ function getCurrentChar(id)
 
 CommandManager.addHandler('newChar', (args,msg)=>{
   var C = getCurrentChar(msg.author.id);
-  if(C){
+  /*if(C){
     msg.channel.send('You already have a character. You must delete them before you can create another.')
     return
-  }
+  }*/
   if(Characters[msg.author.id]) 
   {
     Characters[msg.author.id].push(newChar());
