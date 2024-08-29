@@ -3,7 +3,22 @@ const Config = require('../config.json')
 const fs = require('fs')
 var Characters = require('./characters.json')
 var Abilities = require('../data/abilities.json')
+var CurrentCharacter = require('../data/Players.json');
 var Items = require('../data/items.json')
+
+function updateCharacterFormat()
+{
+  var players = Object.keys(Characters);
+  players.forEach(player => {
+    CurrentCharacter[player] = 0;
+    Characters[player] = [Characters[player]];
+  })  
+}
+
+function hasCharacters(id)
+{
+  return Characters.hasOwnProperty(id);
+}
 
 function saveCharData(){
   fs.writeFileSync('./handlers/characters.json', JSON.stringify(Characters,null,2))
@@ -132,31 +147,83 @@ ${sheet.contacts.length ? sheet.contacts.map(c => `*${c.name}, ${c.info}* ${c.fa
 `
 }
 
+function getCurrentChar(id)
+{
+  if(!Characters.hasOwnProperty(id))return false;
+  
+  if(!Characters[msg.author.id][CurrentCharacter[msg.author.id]])throw new Error("Erm excuse me what the actual fuck");
+
+  return Characters[msg.author.id][CurrentCharacter[msg.author.id]];
+}
+
 CommandManager.addHandler('newChar', (args,msg)=>{
-  var C = Characters[msg.author.id];
+  var C = getCurrentChar(msg.author.id);
   if(C){
     msg.channel.send('You already have a character. You must delete them before you can create another.')
     return
   }
-  Characters[msg.author.id] = newChar();
+  if(Characters[msg.author.id]) 
+  {
+    Characters[msg.author.id].push(newChar());
+    CurrentCharacter[msg.author.id] = Characters[msg.author.id].length-1;
+  }
+  else
+  {
+    Characters[msg.author.id] = newChar();   
+    CurrentCharacter[msg.author.id] = 0;
+  }
   msg.channel.send('Your character has been created.\nYou will need to **set** your name and class, **inc**rement your stats and **add** any items and abilities.\n')
   saveCharData();
   return
 })
 
 CommandManager.addHandler('sheet', (args,msg)=>{
-  var C = Characters[msg.author.id]
-  if(!C){
+  if(!hasCharacter(msg.author.id)){
     msg.channel.send(`You need to create a character with ${Config.prefix}newChar first.`)
     return
   }
+  var C = getCurrentChar(msg.author.id)[CurrentCharacter[msg.author.id]];
   msg.channel.send(renderChar(C))
   return
 })
 
+CommandManager.addHandler('characters', (args, msg)=>{
+  if(!hasCharacters(msg.author.id))
+  {
+    msg.channel.send(`You have no characters currently. You can create one with ${Config.prefix}newchar first.`)
+    return
+  }
+  var currentCharacter = CurrentCharacter[msg.author.id]
+  var cNames = Characters[msg.author.id].map((sheet, index) => (index == currentCharacter) ? `**${sheet.name}**` : sheet.name);
+  msg.channel.send(`Your current characters: ${cNames.join('\n')}\nTo switch your current character, use $become (character name)`) 
+  return
+})
+
+CommandManager.addHandler('become', (args, msg)=> {
+  if(!hasCharacters(msg.author.id))
+  {
+    msg.channel.send('no')
+    return
+  }
+  args.splice(0,1);
+  var name = args.join(' ');
+  var newIndex = Characters[msg.author.id].findIndex(sheet => sheet.name == name);
+
+  if(newIndex < 0)
+  {
+    msg.channel.send(`Could not find a character you own with the name ${name}`)
+    return
+  }
+  
+  CurrentCharacter[msg.author.id] = newIndex;
+  msg.channel.send(`Updated your active character. Welcome, ${name}.`);
+
+  return
+})
+
 CommandManager.addHandler('stats', (args,msg)=>{
-  var C = Characters[msg.author.id]
-  if(!C){
+  var C = getCurrentChar(msg.author.id);
+  if(!hasCharacter(msg.author.id)){
     msg.channel.send(`You must create a character with ${Config.prefix}newChar first.`)
     return
   }
@@ -195,8 +262,8 @@ Sway: ${renderGauge(sheet.xp.sway)}`)}
 })
 
 CommandManager.addHandler('set', (args,msg)=>{
-  var C = Characters[msg.author.id];
-  if(!C){
+  var C = getCurrentChar(msg.author.id);
+  if(!hasCharacter(msg.author.id)){
     msg.channel.send(`You have not yet created a character. Do so with ${Config.prefix}newChar first.`)
     return
   }
@@ -214,8 +281,8 @@ CommandManager.addHandler('set', (args,msg)=>{
 })
 
 CommandManager.addHandler('inc', (args,msg)=>{
-  var C = Characters[msg.author.id];
-  if(!C){
+  var C = getCurrentChar(msg.author.id);
+  if(!hasCharacter(msg.author.id)){
     msg.channel.send(`You have not yet created a character. Do so with ${Config.prefix}newChar first.`)
     return
   }
@@ -246,8 +313,8 @@ CommandManager.addHandler('inc', (args,msg)=>{
 })
 
 CommandManager.addHandler('add', (args,msg)=>{
-  var C = Characters[msg.author.id];
-  if(!C){
+  var C = getCurrentChar(msg.author.id);
+  if(!hasCharacter(msg.author.id)){
     msg.channel.send(`You have not yet created a character. Do so with ${Config.prefix}newChar first.`)
     return
   }
@@ -266,7 +333,7 @@ ${Config.prefix}add trauma <trauma>`)
       msg.channel.send(`Usage: ${Config.prefix}add ability <ability name>`)
       return
     }
-    if(!C.class){
+    if(!hasCharacter(msg.author.id).class){
       msg.channel.send('You must first select your class before choosing abilities.')
       return
     }
@@ -355,8 +422,8 @@ ${Config.prefix}add trauma <trauma>`)
 })
 
 CommandManager.addHandler('remove', (args,msg)=>{
-  var C = Characters[msg.author.id];
-  if(!C){
+  var C = getCurrentChar(msg.author.id);
+  if(!hasCharacter(msg.author.id)){
     msg.channel.send(`You have not yet created a character. Do so with ${Config.prefix}newChar first.`)
     return
   }
@@ -375,7 +442,7 @@ ${Config.prefix}remove trauma <trauma>`)
       msg.channel.send(`Usage: ${Config.prefix}remove ability <ability name>`)
       return
     }
-    if(!C.class){
+    if(!hasCharacter(msg.author.id).class){
       msg.channel.send('You must first select your class before modifying abilities.')
       return
     }
@@ -438,7 +505,7 @@ CommandManager.addHandler('renderTest', (args,msg)=>{
 
 //CommandManager.addHandler('items')
 CommandManager.addHandler('items', (args,msg)=>{
-  var C = Characters[msg.author.id]
+  var C = getCurrentChar(msg.author.id)
 
   msg.channel.send(`${C ? `**__Class Specific:__**\n${Items[C.class.toLowerCase()].map(_=>`${_.name} ${_.amount ? `Uses: ${_.amount} ` : ''}${'⭘'.repeat(_.load)}${_.limit ? ` (up to ${'⭘'.repeat(_.limit)})` : ''}`).join('\n')}\n` : ''}**__Standard:__**\n${Items.standard.map(_=>`${_.name} ${_.amount ? `Uses: ${_.amount} ` : ''}${'⭘'.repeat(_.load)}${_.limit ? ` (up to ${'⭘'.repeat(_.limit)})` : ''}`).join('\n')}`)
 })
@@ -457,8 +524,8 @@ CommandManager.addHandler('abilities', (args,msg)=>{
 })
 
 CommandManager.addHandler('wallet', (args, msg)=> {
-    var C = Characters[msg.author.id]
-    if(!C){
+    var C = getCurrentChar(msg.author.id)
+    if(!hasCharacter(msg.author.id)){
 		msg.channel.send(`You ain't even got a character yet, fuck you mean wallet?`)
 		return
 	}
