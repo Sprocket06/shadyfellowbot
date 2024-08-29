@@ -151,9 +151,9 @@ function getCurrentChar(id)
 {
   if(!Characters.hasOwnProperty(id))return false;
   
-  if(!Characters[msg.author.id][CurrentCharacter[msg.author.id]])throw new Error("Erm excuse me what the actual fuck");
+  if(!Characters[id][CurrentCharacter[id]])throw new Error("Erm excuse me what the actual fuck");
 
-  return Characters[msg.author.id][CurrentCharacter[msg.author.id]];
+  return Characters[id][CurrentCharacter[id]];
 }
 
 CommandManager.addHandler('newChar', (args,msg)=>{
