@@ -178,7 +178,7 @@ CommandManager.addHandler('newChar', (args,msg)=>{
 })
 
 CommandManager.addHandler('sheet', (args,msg)=>{
-  if(!hasCharacter(msg.author.id)){
+  if(!hasCharacters(msg.author.id)){
     msg.channel.send(`You need to create a character with ${Config.prefix}newChar first.`)
     return
   }
@@ -223,7 +223,7 @@ CommandManager.addHandler('become', (args, msg)=> {
 
 CommandManager.addHandler('stats', (args,msg)=>{
   var C = getCurrentChar(msg.author.id);
-  if(!hasCharacter(msg.author.id)){
+  if(!hasCharacters(msg.author.id)){
     msg.channel.send(`You must create a character with ${Config.prefix}newChar first.`)
     return
   }
@@ -263,7 +263,7 @@ Sway: ${renderGauge(sheet.xp.sway)}`)}
 
 CommandManager.addHandler('set', (args,msg)=>{
   var C = getCurrentChar(msg.author.id);
-  if(!hasCharacter(msg.author.id)){
+  if(!hasCharacters(msg.author.id)){
     msg.channel.send(`You have not yet created a character. Do so with ${Config.prefix}newChar first.`)
     return
   }
@@ -282,7 +282,7 @@ CommandManager.addHandler('set', (args,msg)=>{
 
 CommandManager.addHandler('inc', (args,msg)=>{
   var C = getCurrentChar(msg.author.id);
-  if(!hasCharacter(msg.author.id)){
+  if(!hasCharacters(msg.author.id)){
     msg.channel.send(`You have not yet created a character. Do so with ${Config.prefix}newChar first.`)
     return
   }
@@ -314,7 +314,7 @@ CommandManager.addHandler('inc', (args,msg)=>{
 
 CommandManager.addHandler('add', (args,msg)=>{
   var C = getCurrentChar(msg.author.id);
-  if(!hasCharacter(msg.author.id)){
+  if(!hasCharacters(msg.author.id)){
     msg.channel.send(`You have not yet created a character. Do so with ${Config.prefix}newChar first.`)
     return
   }
@@ -333,7 +333,7 @@ ${Config.prefix}add trauma <trauma>`)
       msg.channel.send(`Usage: ${Config.prefix}add ability <ability name>`)
       return
     }
-    if(!hasCharacter(msg.author.id).class){
+    if(!hasCharacters(msg.author.id).class){
       msg.channel.send('You must first select your class before choosing abilities.')
       return
     }
@@ -423,7 +423,7 @@ ${Config.prefix}add trauma <trauma>`)
 
 CommandManager.addHandler('remove', (args,msg)=>{
   var C = getCurrentChar(msg.author.id);
-  if(!hasCharacter(msg.author.id)){
+  if(!hasCharacters(msg.author.id)){
     msg.channel.send(`You have not yet created a character. Do so with ${Config.prefix}newChar first.`)
     return
   }
@@ -442,7 +442,7 @@ ${Config.prefix}remove trauma <trauma>`)
       msg.channel.send(`Usage: ${Config.prefix}remove ability <ability name>`)
       return
     }
-    if(!hasCharacter(msg.author.id).class){
+    if(!hasCharacters(msg.author.id).class){
       msg.channel.send('You must first select your class before modifying abilities.')
       return
     }
@@ -525,7 +525,7 @@ CommandManager.addHandler('abilities', (args,msg)=>{
 
 CommandManager.addHandler('wallet', (args, msg)=> {
     var C = getCurrentChar(msg.author.id)
-    if(!hasCharacter(msg.author.id)){
+    if(!hasCharacters(msg.author.id)){
 		msg.channel.send(`You ain't even got a character yet, fuck you mean wallet?`)
 		return
 	}
