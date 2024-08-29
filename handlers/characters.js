@@ -182,7 +182,7 @@ CommandManager.addHandler('sheet', (args,msg)=>{
     msg.channel.send(`You need to create a character with ${Config.prefix}newChar first.`)
     return
   }
-  var C = getCurrentChar(msg.author.id)[CurrentCharacter[msg.author.id]];
+  var C = getCurrentChar(msg.author.id);
   msg.channel.send(renderChar(C))
   return
 })
