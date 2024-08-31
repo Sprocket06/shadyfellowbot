@@ -52,5 +52,16 @@
     {"name":"Mastermind", "info":": You may expend your special armor to protect a teammate, or to push yourself when you gather information or work on a long-term project."},
     {"name":"Weaving the Web", "info":"You gain +1d to Consort when you gather information on a target for a score. You get +1d to the engagement roll for that operation"},
     {"name":"Veteran", "info":"Choose a special ability from another source."}
+  ],
+  "slide":[
+    {"name":"Rook's Gambit", "info":"Take 2 stress to roll your best action rating while performing a different action. Say how you adapt your skill to this use."},
+    {"name":"Cloak & Dagger", "info":"When you use a disguise or other form of covert misdirection, you get +1d to rolls to confuse or deflect suspicion. When you throw off your disguise, the resulting surprise gives you the initiative in the situation."},
+    {"name":"Ghost Voice", "info":"You know the secret method to interact with a ghost or demon as if it was a normal human, regardless of how wild or feral it appears. You gain potency when communicating with the supernatural."},
+    {"name":"Like Looking Into A Mirror", "info":"You can always tell when someone is lying to you."},
+    {"name":"A Little Something On The Side", "info":"At the end of each downtime phase, you earn +2 stash."},
+    {"name":"Mesmerism", "info":"When you Sway someone, you may cause them to forget that it's happened until they next interact with you."},
+    {"name":"Subterfuge", "info":"You may expend your special armor to resist a consequence from suspicion or persuasion, or to push yourself for subterfuge."},
+    {"name":"Trust In Me", "info":"You get +1d vs. a target with whom you have an intimate relationship."},
+    {"name":"Veteran", "info":"Choose a special ability from another source."}
   ]
 }

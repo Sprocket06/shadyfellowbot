@@ -219,7 +219,7 @@ CommandManager.addHandler('become', (args, msg)=> {
   
   CurrentCharacter[msg.author.id] = newIndex;
   msg.channel.send(`Updated your active character. Welcome, ${name}.`);
-  fs.writeFileSync('../data/Players.json', JSON.stringify(CurrentCharacter,null,2))
+  fs.writeFileSync('./data/Players.json', JSON.stringify(CurrentCharacter,null,2))
 
   return
 })
