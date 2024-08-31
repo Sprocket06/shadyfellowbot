@@ -336,7 +336,7 @@ ${Config.prefix}add trauma <trauma>`)
       msg.channel.send(`Usage: ${Config.prefix}add ability <ability name>`)
       return
     }
-    if(!hasCharacters(msg.author.id).class){
+    if(!C.class){
       msg.channel.send('You must first select your class before choosing abilities.')
       return
     }
