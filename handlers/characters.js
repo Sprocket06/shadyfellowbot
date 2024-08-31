@@ -22,6 +22,7 @@ function hasCharacters(id)
 
 function saveCharData(){
   fs.writeFileSync('./handlers/characters.json', JSON.stringify(Characters,null,2))
+  //fs.writeFileSync('../data/Players.json', JSON.stringify(CurrentCharacter,null,2))
 }
 
 function newChar(){
@@ -61,7 +62,8 @@ function newChar(){
     contacts:[],
     load: 0,
     coin:0,
-    stash: 0
+    stash: 0,
+    clocks: []
   }
 }
 
@@ -169,7 +171,7 @@ CommandManager.addHandler('newChar', (args,msg)=>{
   }
   else
   {
-    Characters[msg.author.id] = newChar();   
+    Characters[msg.author.id] = [newChar()];   
     CurrentCharacter[msg.author.id] = 0;
   }
   msg.channel.send('Your character has been created.\nYou will need to **set** your name and class, **inc**rement your stats and **add** any items and abilities.\n')
@@ -217,6 +219,7 @@ CommandManager.addHandler('become', (args, msg)=> {
   
   CurrentCharacter[msg.author.id] = newIndex;
   msg.channel.send(`Updated your active character. Welcome, ${name}.`);
+  fs.writeFileSync('../data/Players.json', JSON.stringify(CurrentCharacter,null,2))
 
   return
 })
