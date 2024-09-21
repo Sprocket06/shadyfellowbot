@@ -4,14 +4,26 @@ const { DiceRoller } = require('dice-roller-parser')
 const roller = new DiceRoller();
 
 var Characters = require('./characters.json')
+var CurrentCharacter = require('../data/Players.json');
 var diceCommands = require('./diceCommands.json')
+
+function getCurrentChar(id)
+{
+  if(!Characters.hasOwnProperty(id))return false;
+  
+  if(!Characters[id][CurrentCharacter[id]]){
+	  throw new Error("Erm excuse me what the actual fuck");
+  }
+
+  return Characters[id][CurrentCharacter[id]];
+}
 
 function save(){
   fs.writeFileSync('diceCommands.json', JSON.stringify(diceCommands))
 }
 
 function preprocess(input, cID){
-  var C = Characters[cID]
+  var C = getCurrentChar(cID);
   input = input.replace(/<#(\w+)>/g, (match, stat, index)=>{
     if(!C){
       throw new Error('Character stats do not exist!')

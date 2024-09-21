@@ -1,0 +1,570 @@
+{
+  "246342795328094209": {
+    "name": "__**Iris Lomond**__",
+    "crew": "Snake Eyes",
+    "alias": "Savant",
+    "heritage": "* ** **Akoros**. Owns a fairly renowned apothecary and clinic in Crow's Foot, the *Ampulla Aurea.",
+    "background": "* ** **Academic.** Practiced medical work under her parents' tutelage, volunteered with treating patients when her parents couldn't*__.__",
+    "vice": "* ** **Obligation.** Still volunteers at various clinics nearby, just not anywhere near the *Ampulla Aurea.",
+    "heal_clock": {
+      "type": "clock",
+      "total": 4,
+      "current": 0
+    },
+    "stress": {
+      "type": "gauge",
+      "total": 9,
+      "current": 7
+    },
+    "trauma": [],
+    "harm": [
+      [
+        "Splinter*",
+        "Burnt hand"
+      ],
+      [],
+      []
+    ],
+    "armor": {
+      "light": false,
+      "heavy": false,
+      "special": false
+    },
+    "class": "Leech",
+    "xp": {
+      "playbook": {
+        "type": "gauge",
+        "total": 8,
+        "current": 0
+      },
+      "insight": {
+        "type": "gauge",
+        "total": 6,
+        "current": 0
+      },
+      "prowess": {
+        "type": "gauge",
+        "total": 6,
+        "current": 5
+      },
+      "resolve": {
+        "type": "gauge",
+        "total": 6,
+        "current": 2
+      },
+      "hunt": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "study": {
+        "type": "gauge",
+        "total": 4,
+        "current": 2
+      },
+      "survey": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "tinker": {
+        "type": "gauge",
+        "total": 4,
+        "current": 2
+      },
+      "finesse": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "prowl": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "skirmish": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "wreck": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "attune": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "command": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "consort": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "sway": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      }
+    },
+    "abilities": [
+      {
+        "name": "Physicker",
+        "info": "You can tinker with bones, blood, and bodily humours to treat wounds or stabilize the dying. You may study a malady or a corpse. Everyone in your crew gets +1d to their healing treatment rolls."
+      }
+    ],
+    "items": [],
+    "contacts": [
+      {
+        "favor": -1,
+        "name": "Stazia",
+        "info": "an apothecary"
+      },
+      {
+        "favor": 1,
+        "name": "Jul",
+        "info": "a blood dealer"
+      }
+    ],
+    "load": 0,
+    "coin": 1,
+    "stash": 0,
+    "look": "Female, bright, slim, worn\nCollared shirt, long scarf, work trousers",
+    "affiliation": "Snake Eyes"
+  },
+  "458462187011440640": {
+    "name": "Mason Mors",
+    "crew": "Snake eyes",
+    "alias": "batty",
+    "heritage": "severos",
+    "background": "military",
+    "vice": "Faith",
+    "heal_clock": {
+      "type": "clock",
+      "total": 4,
+      "current": 2
+    },
+    "stress": {
+      "type": "gauge",
+      "total": 9,
+      "current": 5
+    },
+    "trauma": [],
+    "harm": [
+      [
+        "bonked",
+        "Battered"
+      ],
+      [],
+      []
+    ],
+    "armor": {
+      "light": false,
+      "heavy": false,
+      "special": false
+    },
+    "class": "Hound",
+    "xp": {
+      "playbook": {
+        "type": "gauge",
+        "total": 8,
+        "current": 3
+      },
+      "insight": {
+        "type": "gauge",
+        "total": 6,
+        "current": 0
+      },
+      "prowess": {
+        "type": "gauge",
+        "total": 6,
+        "current": 1
+      },
+      "resolve": {
+        "type": "gauge",
+        "total": 6,
+        "current": 0
+      },
+      "hunt": {
+        "type": "gauge",
+        "total": 4,
+        "current": 2
+      },
+      "study": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "survey": {
+        "type": "gauge",
+        "total": 4,
+        "current": 2
+      },
+      "tinker": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "finesse": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "prowl": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "skirmish": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "wreck": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "attune": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "command": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "consort": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "sway": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      }
+    },
+    "abilities": [
+      {
+        "name": "Sharpshooter",
+        "info": "You can push yourself to do one of the following: make a ranged attack at extreme distance beyond what’s normal for the weapon—unleash a barrage of rapid fire to suppress the enemy."
+      }
+    ],
+    "items": [
+      {
+        "name": "Fine pair of pistols",
+        "load": 1
+      },
+      {
+        "name": "A Pistol",
+        "load": 1
+      },
+      {
+        "name": "A Blade or Two",
+        "load": 1
+      }
+    ],
+    "contacts": [
+      {
+        "favor": 1,
+        "name": "Celene",
+        "info": "a sentinel"
+      },
+      {
+        "favor": -1,
+        "name": "Veleris",
+        "info": "a spy"
+      }
+    ],
+    "load": 0,
+    "coin": 2,
+    "stash": 0,
+    "look": "Man, Dark, athletic, black hooded cloak, suit & tie",
+    "affiliation": "Snake eyes"
+  },
+  "248981823516835840": {
+    "name": "James Colzione",
+    "crew": "Snake Eyes",
+    "alias": "Cage",
+    "heritage": "The Dagger Isles. Grew up in a traveling merchant family.",
+    "background": "Trade. Grew up protecting the wares of traveling merchants and predicting where danger lurks.",
+    "vice": "Gambling. Loves rolling the dice and risking his money, contrary to his normally cautious attitude.",
+    "heal_clock": {
+      "type": "clock",
+      "total": 4,
+      "current": 0
+    },
+    "stress": {
+      "type": "gauge",
+      "total": 9,
+      "current": 7
+    },
+    "trauma": [
+      "Haunted"
+    ],
+    "harm": [
+      [
+        "Exhaustion"
+      ],
+      [
+        "Concussion"
+      ],
+      []
+    ],
+    "armor": {
+      "light": false,
+      "heavy": false,
+      "special": false
+    },
+    "class": "Cutter",
+    "xp": {
+      "playbook": {
+        "type": "gauge",
+        "total": 8,
+        "current": 0
+      },
+      "insight": {
+        "type": "gauge",
+        "total": 6,
+        "current": 1
+      },
+      "prowess": {
+        "type": "gauge",
+        "total": 6,
+        "current": 0
+      },
+      "resolve": {
+        "type": "gauge",
+        "total": 6,
+        "current": 4
+      },
+      "hunt": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "study": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "survey": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "tinker": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "finesse": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "prowl": {
+        "type": "gauge",
+        "total": 4,
+        "current": 2
+      },
+      "skirmish": {
+        "type": "gauge",
+        "total": 4,
+        "current": 2
+      },
+      "wreck": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "attune": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "command": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "consort": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "sway": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      }
+    },
+    "abilities": [
+      {
+        "name": "Bodyguard",
+        "info": "When you protect a teammate, take +1d to your resistance roll. When you gather info to anticipate possible threats in the current situation, you get +1 effect."
+      }
+    ],
+    "items": [],
+    "contacts": [
+      {
+        "favor": -1,
+        "name": "Grace",
+        "info": "an extortionist"
+      },
+      {
+        "favor": 1,
+        "name": "Sawtooth",
+        "info": "a physicker"
+      }
+    ],
+    "load": 0,
+    "coin": 3,
+    "stash": 0,
+    "look": "Male. Has a large build with broad shoulders, has black, short, and spiky hair, wears a brown leather jacket (that he sometimes swaps out for a chester overcoat), and is missing a finger on his left hand. Attached to his hip is an odd, sheathed sword.",
+    "affiliation": "None* *"
+  },
+  "221051273498198016": {
+    "name": "Nogai Turi",
+    "crew": "Snake Eyes",
+    "alias": "Acrid",
+    "heritage": "Severos",
+    "background": "Military",
+    "vice": "Gambling. He fucking LOVES blackjack.",
+    "heal_clock": {
+      "type": "clock",
+      "total": 4,
+      "current": 0
+    },
+    "stress": {
+      "type": "gauge",
+      "total": 9,
+      "current": 2
+    },
+    "trauma": [],
+    "harm": [
+      [],
+      [],
+      []
+    ],
+    "armor": {
+      "light": false,
+      "heavy": false,
+      "special": false
+    },
+    "class": "Spider",
+    "xp": {
+      "playbook": {
+        "type": "gauge",
+        "total": 8,
+        "current": 0
+      },
+      "insight": {
+        "type": "gauge",
+        "total": 6,
+        "current": 0
+      },
+      "prowess": {
+        "type": "gauge",
+        "total": 6,
+        "current": 0
+      },
+      "resolve": {
+        "type": "gauge",
+        "total": 6,
+        "current": 4
+      },
+      "hunt": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "study": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "survey": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "tinker": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "finesse": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "prowl": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "skirmish": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "wreck": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "attune": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      },
+      "command": {
+        "type": "gauge",
+        "total": 4,
+        "current": 1
+      },
+      "consort": {
+        "type": "gauge",
+        "total": 4,
+        "current": 2
+      },
+      "sway": {
+        "type": "gauge",
+        "total": 4,
+        "current": 0
+      }
+    },
+    "abilities": [
+      {
+        "name": "Foresight",
+        "info": "Two times per score you can assist a teammate without paying stress. Tell us how you prepared for this."
+      }
+    ],
+    "items": [],
+    "contacts": [
+      {
+        "favor": -1,
+        "name": "Riven",
+        "info": "A Chemist"
+      },
+      {
+        "favor": 1,
+        "name": "Salia",
+        "info": "An Information Broker"
+      }
+    ],
+    "load": 0,
+    "coin": 0,
+    "stash": 0,
+    "look": "Wearing regular traveler's"
+  }
+}

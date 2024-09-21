@@ -4,7 +4,7 @@ const fs = require('fs')
 var textCommands = require('./textCommands.json')
 
 function save(){
-  fs.writeFileSync('./handlers/textCommands.json', JSON.stringify(textCommands))
+  fs.writeFileSync('./handlers/textCommands.json', JSON.stringify(textCommands,null,2))
 }
 
 Object.keys(textCommands).forEach((item, i) => {

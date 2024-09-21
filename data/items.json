@@ -15,7 +15,8 @@
     { "name":"Subterfuge Supplies", "load":1},
     { "name":"Demolition Tools", "load":2},
     { "name":"Tinkering Tools", "load":1},
-    { "name":"Lantern", "load":1}
+    { "name":"Lantern", "load":1},
+    { "name":"Spiritbane Charm", "load":0}
   ],
   "cutter": [
     {"name":"Fine hand weapon", "load":1},
