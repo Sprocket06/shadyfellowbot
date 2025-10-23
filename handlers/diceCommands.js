@@ -38,7 +38,7 @@ function preprocess(input, cID){
 }
 
 CommandManager.addHandler('ror2', (args,msg)=>{
-  const characters = 'Commando,Huntress,Bandit,MUL-T,Engineer,Artificer,Mercenary,Rex,Loader,Acrid,Captain'.split(',')
+  const characters = 'Commando,Huntress,Bandit,MUL-T,Engineer,Artificer,Mercenary,Rex,Loader,Acrid,Captain,Seeker,Chef,Railgunner,False Son,Void Fiend'.split(',')
   msg.channel.send(characters[Math.floor(Math.random() * characters.length)]);
 })
 
